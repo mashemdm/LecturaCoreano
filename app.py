@@ -8,17 +8,27 @@ from PIL import Image
 
 st.title("Reconocimiento óptico de Caracteres")
 
-img_file_buffer = st.camera_input("Toma una Foto")
+# img_file_buffer = st.camera_input("Toma una Foto")
+uploaded_file = st.file_uploader("Sube una imagen", type=["jpg", "jpeg", "png"])
+
 
 with st.sidebar:
       filtro = st.radio("Aplicar Filtro",('Con Filtro', 'Sin Filtro'))
 
 
-if img_file_buffer is not None:
+"""if img_file_buffer is not None:
     # To read image file buffer with OpenCV:
     bytes_data = img_file_buffer.getvalue()
     cv2_img = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_COLOR)
-    
+"""    
+
+if uploaded_file is not None:
+    # To read image file buffer with OpenCV:
+    img_bytes = uploaded_file.read()
+    nparr = np.frombuffer(img_bytes, np.uint8)
+    cv2_img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+
+      
     if filtro == 'Con Filtro':
          cv2_img=cv2.bitwise_not(cv2_img)
     else:
