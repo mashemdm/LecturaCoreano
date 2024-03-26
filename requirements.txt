@@ -3,5 +3,4 @@ streamlit-webrtc
 numpy
 opencv-python-headless
 pytesseract
-pip install pytesseract
 Pillow
