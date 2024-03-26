@@ -29,10 +29,8 @@ if uploaded_file is not None:
     
         
     img_rgb = cv2.cvtColor(cv2_img, cv2.COLOR_BGR2RGB)
-       # Ensure Tesseract is configured for Korean recognition
-    config = '-l kor'  # Specify Korean language code
       
-    text=pytesseract.image_to_string(img_rgb, config=config)
+    text=pytesseract.image_to_string(img_rgb,)
     st.write(text) 
     
 
