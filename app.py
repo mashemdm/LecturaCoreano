@@ -29,6 +29,6 @@ if uploaded_file is not None:
         
     img_rgb = cv2.cvtColor(cv2_img, cv2.COLOR_BGR2RGB)
     # text=pytesseract.image_to_string(img_rgb)
-   text = pytesseract.image_to_string(img_rgb, lang='kor', config=tessdata_dir_config)
+    text = pytesseract.image_to_string(img_rgb, lang='kor', config=tessdata_dir_config)  
     st.write(text) 
     
