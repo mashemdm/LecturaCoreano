@@ -14,7 +14,7 @@ with st.sidebar:
 
 if uploaded_file is not None:
     # To read image file buffer with OpenCV:
-    bytes_data = uploaded_file.read()
+    bytes_data = uploaded_file.getvalue()
     cv2_img = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_COLOR)
     
     if filtro == 'Con Filtro':
