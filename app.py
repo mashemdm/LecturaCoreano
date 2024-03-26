@@ -5,7 +5,7 @@ import pytesseract
 from PIL import Image
 
 pytesseract.pytesseract.tesseract_cmd = r'"C:\Program Files\Tesseract-OCR\tesseract.exe"'
-tessdata_dir_config = '--tessdata-dir "C:\\Program Files\\Tesseract-OCR\\tessdata"'
+tessdata_dir_config = '--tessdata-dir "C:\Program Files\Tesseract-OCR\tessdata"'
 
 st.title("Reconocimiento óptico de Caracteres")
 
