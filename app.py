@@ -29,6 +29,10 @@ if uploaded_file is not None:
     
         
     img_rgb = cv2.cvtColor(cv2_img, cv2.COLOR_BGR2RGB)
+
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'  # Replace with your Tesseract path (adjust accordingly)
+    config = '-l kor'  # Specify Korean language code
+      
     text=pytesseract.image_to_string(img_rgb)
     st.write(text) 
     
