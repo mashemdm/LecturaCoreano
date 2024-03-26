@@ -30,7 +30,7 @@ if uploaded_file is not None:
       
     if filtro == 'Con Filtro':
          cv2_img=cv2.bitwise_not(cv2_img)
-   """ else:
+   """else:
          cv2_img= cv2_img"""
     
         
